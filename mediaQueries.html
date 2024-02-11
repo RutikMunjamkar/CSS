@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media Queries
+    </title>
+    <style>
+        .class1{
+            height:400px;
+            width:400px;
+            background-color:aqua; 
+            border:1px red solid;  
+        }
+        .container{
+            height:500px;
+            width:600px;
+            background-color: aqua;
+            border:2px red solid;
+            display:flex;
+        }
+        .class2{
+            height:100px;
+            width:150px;
+            background-color: blue;
+            border: 2px red solid;
+        }
+        #id1{
+            background-color: yellow;
+        }
+        #id2{
+            background-color: orange;
+        }
+        #id3{
+            background-color:blueviolet;
+        }
+        @media (min-width: 300px) and (max-width:500px) {
+            /* if the dimension is in the range while wrapping then it will change to below mentioned color */
+            .class1{
+                background-color: green;
+            }
+        }
+        @media (max-width:200px){
+            .container{
+                flex-direction: column;
+            }
+        }
+        @media (min-width:201px) {
+            .container{
+                flex-direction:row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="class1">Hello ji</div>
+    <div class="container">
+        <div id="id1"class="class2">A</div>
+        <div id="id2"class="class2">B</div>
+        <div id="id3" class="class2">C</div>
+    </div>
+</body>
+</html>

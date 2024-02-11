@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+    <style>
+        /* varibales could be defined inside this */
+        :root{
+            /* variables could  defined here and can be accessed anywhere in hte style */
+            --primaryColor:brown;
+        }
+        .container{
+            background-color: aqua;
+            border:2px black solid;
+            margin: 3px;
+            padding:3px;
+            height:450px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .box{
+            /* custom variables */
+            --primaryColor:brown;
+            --primaryWidth:330px;
+            border:2px var(--primaryColor) solid;
+            padding:3px;
+            margin:3px;
+            height:350px;
+            width:var(--primaryWidth);
+            /* first is the x offset means how many pixels it has shifted towards right simlarly next is y offset and then color */
+            /* box-shadow: 10px 10px red; */
+            /* the extra/third parameter is the blur radius */
+            /* box-shadow: 10px -10px 5px red; */
+            /*the paramter is the shadow spread*/
+            /* box-shadow: 10px 10px 5px 20px red; */
+            /* insde shadow */
+            box-shadow:inset 10px 10px red;
+             /*multiple shadows  */
+             box-shadow:5px 5px red, 10px 10px blue;
+        }
+        #head1{
+            /* x offset y offset blur radius color */
+            /* text-shadow:13px 13px 2px red; */
+            /* color x offset y offset radius color */
+            /* text-shadow:red 10px 10px 2px; */
+            /* x offset y offset color */
+            /* text-shadow:10px 10px red; */
+            /* color x offset y offset */
+            /* text-shadow:red 10px 10px; */
+            /* x offset y offset and default of the (color of the text) and blur */
+            color:red;
+            text-shadow:10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="../lecture17/img1.jpg" alt="name1">
+            <h2 id="head1">Welcome to the World</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptatem temporibus fuga possimus esse
+                 architecto minus illum sapiente impedit voluptas!</p>
+        </div>
+    </div>
+</body>
+</html>
